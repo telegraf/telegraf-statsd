@@ -41,14 +41,15 @@ telegraf.startPolling()
 
 * `count` bot updates counter
 * `<event type>.count` event type counter(message, inlineQuery, etc.)
-* `<event type>.<event subtype>.count` event subtype counter(text, sticker, etc.)
+* `message.<message subtype>.count` message subtype counter(text, sticker, etc.)
 * `chats` chats set
 * `users` users set
 * `text.size` text messages length histogram
-* `error.count` error counter
-* `error.<event type>.count` update type(message, inlineQuery, etc.) error counter
+* `errors.count` error counter
+* `errors.<event type>.count` update type(message, inlineQuery, etc.) error counter
 * `duration` handler duration
 * `<event type>.duration` update type(message, inlineQuery, etc.) handler duration 
+* `message.<message subtype>.duration` message subtype(text, sticker, etc.) handler duration 
 
 ## License
 
