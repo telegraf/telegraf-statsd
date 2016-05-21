@@ -5,7 +5,8 @@ var telegraf = new Telegraf(process.env.BOT_TOKEN)
 
 telegraf.use(stats({
   host: process.env.STATS_IP,
-  port: process.env.STATS_PORT
+  port: process.env.STATS_PORT,
+  prefix: 'mybot'
 }))
 
 telegraf.on('text', function * () {
