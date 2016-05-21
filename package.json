@@ -1,0 +1,47 @@
+{
+  "name": "telegraf-statsd",
+  "version": "0.0.0",
+  "description": "Telegraf statsd middleware",
+  "main": "lib/stats.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/telegraf/telegraf-statsd.git"
+  },
+  "keywords": [
+    "telegram",
+    "telegram bot",
+    "telegraf",
+    "bot framework",
+    "statsd",
+    "stats"
+  ],
+  "author": "Vitaly Domnikov <dotcypress@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/telegraf/telegraf-statsd/issues"
+  },
+  "homepage": "https://github.com/telegraf/telegraf-statsd#readme",
+  "engines": {
+    "node": ">=4.4.4"
+  },
+  "files": [
+    "lib/stats.js"
+  ],
+  "scripts": {
+    "test": "mocha test --require should"
+  },
+  "dependencies": {
+    "debug": "^2.2.0",
+    "statsy": "^0.2.0"
+  },
+  "peerDependencies": {
+    "telegraf": ">=0.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.10.2",
+    "eslint-plugin-mocha": "^2.2.0",
+    "mocha": "^2.4.5",
+    "should": "^8.3.1",
+    "telegraf": ">=0.7.0"
+  }
+}
