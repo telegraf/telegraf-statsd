@@ -39,17 +39,22 @@ telegraf.startPolling()
 
 ## Metrics
 
-* `count` bot updates counter
-* `<event type>.count` event type counter(message, inlineQuery, etc.)
-* `message.<message subtype>.count` message subtype counter(text, sticker, etc.)
-* `chats` chats set
-* `users` users set
-* `text.size` text messages length histogram
-* `errors.count` error counter
-* `errors.<event type>.count` update type(message, inlineQuery, etc.) error counter
-* `duration` handler duration
-* `<event type>.duration` update type(message, inlineQuery, etc.) handler duration 
-* `message.<message subtype>.duration` message subtype(text, sticker, etc.) handler duration 
+| Metric name | Type | Description |
+| --- | --- | --- |
+| `counter` | `counter` | bot updates counter |
+| `<type>.count` | `counter` | update type counter (message, inlineQuery, etc.) |
+| `message.<subtype>.count` | `counter` | message subtype counter(text, sticker, etc.) |
+| `errors.count` | `counter` | error counter |
+| `errors.<type>.count` | `counter` | update type error counter |
+| `errors.message.<subtype>.count` | `counter` | message subtype error counter |
+| `duration` | `timer` | handler duration |
+| `<type>.duration` | `timer` | update type handler duration  |
+| `message.<subtype>.duration` | `timer` | message subtype handler duration  |
+| `chats` | `set` | chats set |
+| `users` | `set` | users set |
+| `text.size` | `histogram` | text messages length |
+
+
 
 ## License
 
