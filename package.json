@@ -1,6 +1,6 @@
 {
   "name": "telegraf-statsd",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Telegraf statsd middleware",
   "main": "lib/stats.js",
   "repository": {
