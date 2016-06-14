@@ -1,7 +1,7 @@
-var Telegraf = require('telegraf')
-var stats = require('../lib/stats')
+const Telegraf = require('telegraf')
+const stats = require('../lib/stats')
 
-var telegraf = new Telegraf(process.env.BOT_TOKEN)
+const telegraf = new Telegraf(process.env.BOT_TOKEN)
 
 telegraf.use(stats({
   host: process.env.STATS_IP,

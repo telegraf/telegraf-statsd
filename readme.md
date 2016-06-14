@@ -14,10 +14,10 @@ $ npm install telegraf-statsd
 ## Example
   
 ```js
-var Telegraf = require('telegraf')
-var stats = require('telegraf-statsd')
+const Telegraf = require('telegraf')
+const stats = require('telegraf-statsd')
 
-var telegraf = new Telegraf(process.env.BOT_TOKEN)
+const telegraf = new Telegraf(process.env.BOT_TOKEN)
 
 telegraf.use(stats())
 
