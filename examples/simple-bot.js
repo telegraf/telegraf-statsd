@@ -9,8 +9,8 @@ telegraf.use(stats({
   prefix: 'mybot'
 }))
 
-telegraf.on('text', function * () {
-  this.reply('Big brother watch you!')
+telegraf.on('text', (ctx) => {
+  ctx.reply('Big brother watch you!')
 })
 
 telegraf.startPolling()
