@@ -14,15 +14,15 @@ $ npm install telegraf-statsd
 ## Example
   
 ```js
-var Telegraf = require('telegraf')
-var stats = require('telegraf-statsd')
+const Telegraf = require('telegraf')
+const stats = require('telegraf-statsd')
 
-var telegraf = new Telegraf(process.env.BOT_TOKEN)
+const telegraf = new Telegraf(process.env.BOT_TOKEN)
 
 telegraf.use(stats())
 
-telegraf.on('text', function * () {
-  this.reply('Big brother watch you!')
+telegraf.on('text', (ctx) => {
+  return ctx.reply('Big brother watch you!')
 })
 
 telegraf.startPolling()
@@ -36,6 +36,16 @@ telegraf.startPolling()
 * `port` - optional statsd port
 * `prefix` - optional statsd prefix ('.' is appended)
 * `tcp` - use TCP instead of UDP
+
+## User context
+
+Telegraf user context props and functions:
+
+```js
+app.use((ctx) => {
+  ctx.statsd  // [Statsy instance](https://github.com/segmentio/statsy)
+});
+```
 
 ## Metrics
 
@@ -53,8 +63,6 @@ telegraf.startPolling()
 | `chats` | `set` | chats set |
 | `users` | `set` | users set |
 | `text.size` | `histogram` | text messages length |
-
-
 
 ## License
 
