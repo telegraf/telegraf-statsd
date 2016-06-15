@@ -37,6 +37,16 @@ telegraf.startPolling()
 * `prefix` - optional statsd prefix ('.' is appended)
 * `tcp` - use TCP instead of UDP
 
+## User context
+
+Telegraf user context props and functions:
+
+```js
+app.use((ctx) => {
+  ctx.statsd  // [Statsy instance](https://github.com/segmentio/statsy)
+});
+```
+
 ## Metrics
 
 | Metric name | Type | Description |
@@ -53,8 +63,6 @@ telegraf.startPolling()
 | `chats` | `set` | chats set |
 | `users` | `set` | users set |
 | `text.size` | `histogram` | text messages length |
-
-
 
 ## License
 
