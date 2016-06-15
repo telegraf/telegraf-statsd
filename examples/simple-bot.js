@@ -10,7 +10,7 @@ telegraf.use(stats({
 }))
 
 telegraf.on('text', (ctx) => {
-  ctx.reply('Big brother watch you!')
+  return ctx.reply('Big brother watch you!')
 })
 
 telegraf.startPolling()

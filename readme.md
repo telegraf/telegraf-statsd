@@ -21,8 +21,8 @@ const telegraf = new Telegraf(process.env.BOT_TOKEN)
 
 telegraf.use(stats())
 
-telegraf.on('text', function * () {
-  this.reply('Big brother watch you!')
+telegraf.on('text', (ctx) => {
+  return ctx.reply('Big brother watch you!')
 })
 
 telegraf.startPolling()
