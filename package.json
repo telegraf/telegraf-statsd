@@ -1,6 +1,6 @@
 {
   "name": "telegraf-statsd",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Telegraf statsd middleware",
   "main": "lib/stats.js",
   "repository": {
@@ -35,7 +35,7 @@
     "statsy": "^0.2.0"
   },
   "peerDependencies": {
-    "telegraf": "^2.0.0"
+    "telegraf": "^2.0.0 || ^3.0.0"
   },
   "devDependencies": {
     "eslint": "^2.10.2",
